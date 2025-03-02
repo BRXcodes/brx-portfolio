@@ -107,6 +107,31 @@ nav .nav-links a:hover {
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: fadeIn 1s ease-out;
+  object-fit: cover;
+  background-color: #f5f7fa;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-photo:not([src]), 
+.profile-photo[src=""],
+.profile-photo[src="#"] {
+  background: linear-gradient(135deg, #77aaff, #5599ff);
+  position: relative;
+}
+
+.profile-photo:not([src])::after, 
+.profile-photo[src=""]::after,
+.profile-photo[src="#"]::after {
+  content: 'BC';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 /* Sections */
