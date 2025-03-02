@@ -112,18 +112,15 @@ nav .nav-links a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
-.profile-photo:not([src]), 
-.profile-photo[src=""],
-.profile-photo[src="#"] {
+.profile-photo.fallback {
   background: linear-gradient(135deg, #77aaff, #5599ff);
   position: relative;
 }
 
-.profile-photo:not([src])::after, 
-.profile-photo[src=""]::after,
-.profile-photo[src="#"]::after {
+.profile-photo.fallback::after {
   content: 'BC';
   position: absolute;
   top: 50%;
@@ -132,6 +129,16 @@ nav .nav-links a:hover {
   color: white;
   font-size: 36px;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  opacity: 1;
+  animation: none;
+}
+
+/* Remove the old fallback styles */
+.profile-photo:not([src]), 
+.profile-photo[src=""],
+.profile-photo[src="#"] {
+  display: none;
 }
 
 /* Sections */
