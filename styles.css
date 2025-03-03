@@ -362,6 +362,22 @@ footer p {
     background: #1a1f24;
 }
 
+.status-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #77aaff, #5599ff);
+    color: white;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(119, 170, 255, 0.3);
+    animation: fadeIn 0.3s ease-out;
+}
+
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
@@ -376,6 +392,13 @@ footer p {
     font-size: 0.875rem;
     color: #4a5568;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, #77aaff, #5599ff);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .project-card h4 {
@@ -413,4 +436,20 @@ footer p {
     .project-card {
         padding: 1.5rem;
     }
+
+    .tech-tags {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Project section specific styles */
+section.blue-bg .project-card {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+section.blue-bg .project-card h3,
+section.blue-bg .project-card h4,
+section.blue-bg .project-card p,
+section.blue-bg .project-card li {
+    color: #2d3748;
 }
